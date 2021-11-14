@@ -37,6 +37,7 @@ public class ConfigExample {
         String group = "DEFAULT_GROUP";
         Properties properties = new Properties();
         properties.put("serverAddr", serverAddr);
+        //创建Config客户端
         ConfigService configService = NacosFactory.createConfigService(properties);
         String content = configService.getConfig(dataId, group, 5000);
         System.out.println(content);
